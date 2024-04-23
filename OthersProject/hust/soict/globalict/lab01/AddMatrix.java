@@ -1,4 +1,4 @@
-package first;
+package hust.soict.globalict.lab01;
 import java.util.Scanner;
 public class AddMatrix {
 	    public static void main(String[] args) {
