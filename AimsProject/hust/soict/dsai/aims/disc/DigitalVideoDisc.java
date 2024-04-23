@@ -1,7 +1,7 @@
-package Aims;
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
-    private String title;
+    public String title;
     private String category;
     private String director;
     private int length;
