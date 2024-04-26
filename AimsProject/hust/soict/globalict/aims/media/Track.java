@@ -26,16 +26,13 @@ public class Track implements Playable {
         return this.getTitle() == itemSong.getTitle() && this.getLength() == itemSong.getLength();
     }
 
-    public void play(){
-        System.out.println("Playing Track: " + this.getTitle());
-        System.out.println("Track length: " + this.getLength());
-    }
+    
 
     //Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Track track = (Track) o;
-        return length == track.length && Objects.equals(title, track.title);
+        return length == track.length && title.equals(track.title);
     }
 }

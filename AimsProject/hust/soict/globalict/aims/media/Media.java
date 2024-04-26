@@ -1,5 +1,11 @@
 package aims.media;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
+import aims.comparactor.*;
+import aims.media.*;
+
 public class Media {
     public int id;
     public String title;
@@ -12,6 +18,7 @@ public class Media {
         this.cost = cost;
     }
 
+    
     // Getters and setters
     public int getId() {
         return id;
@@ -45,18 +52,24 @@ public class Media {
         this.cost = cost;
     }
 
-    public boolean isMatchItem(Media item){
+    public boolean isMatchItem(Media item) {
         return this.id == item.id &&
-            this.title == item.title && 
-            this.category == item.category &&
+            this.title.equals(item.title) && 
+            this.category.equals(item.category) &&
             this.cost == item.cost; 
     }
-
+    public String toString(int order) {
+        return(order + ".Media - " + title + " - " + category + " - " + cost + " $");
+    }
     //overide
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Media media = (Media) o;
-        return Objects.equals(title, media.title);
+        return title.equals(media.title);
     }
+
+    //sort
+    public static final Comparator<Media> Compare_By_Title_Cost = new MediaComparatorByTitleCost();
+    public static final Comparator<Media> Compare_By_Cost_Title = new MediaComparatorByCostTitle();
 }

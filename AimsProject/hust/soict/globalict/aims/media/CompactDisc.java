@@ -1,4 +1,4 @@
-package AimsProject.hust.soict.globalict.aims.media;
+package aims.media;
 
 import java.util.ArrayList;
 import aims.media.*;
@@ -39,6 +39,9 @@ public class CompactDisc extends Disc implements Playable {
         }
         System.out.println("Track not found in TrackList");
            
+    }
+    public String toString(int order){
+       return( order + ".CompactDisc - " + this.getTitle() + " - " + this.getCategory()+ " - " + this.getDirector() +  " - " + this.getArtist() + " - " + this.getLength()+ " - " + this.getCost() + " $");
     }
 
     public int getLength(){

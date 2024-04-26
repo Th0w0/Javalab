@@ -43,9 +43,18 @@ public class Store {
             System.out.println("Store");
             int cnt = 1;
             for (Media media : itemsInStore) {
-                media.toStringItem(cnt);
+                media.toString(cnt);
                 cnt++;
             }
         }
+    }
+
+    public Media searchMedia(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
+            }
+        }
+        return null; 
     }
 }

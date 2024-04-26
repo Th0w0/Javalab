@@ -4,13 +4,28 @@ package aims.media;
 import aims.media.*;
 import java.util.ArrayList;
 import java.util.List;
+import aims.cart.*;
 
 public class Book extends Media {
-    
+    private int token;
     private List<String> authors;
-    public Book(String title, String category, List<String> authors, float cost) {
-        super(title, category, cost);
-        this.authors = authors;
+
+    public Book(String title, String category, String author, float cost, int token){
+        super(title,category, cost);
+        this.token = token;
+        this.authors.add(author);
+    }
+    public Book(int id, String title, String category, float cost, int token){
+        super(title,category, cost);
+        this.token = token;
+    }
+    public Book(String title, String category, float cost, int token){
+        super(title,category, cost);
+        this.token = token;
+
+    }
+    public int getToken(){
+        return token;
     }
 
     // Getters and setters
@@ -38,7 +53,9 @@ public class Book extends Media {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println("Thungu");
+    public String toString(int order){
+        return(order + ".Book - " +  this.title+ " - " + this.getCategory()  + " - " + this.getToken() + " - " + this.getCost() + " $");
     }
+
+    
 }
