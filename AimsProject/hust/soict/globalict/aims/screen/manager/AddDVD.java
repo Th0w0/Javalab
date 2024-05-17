@@ -62,7 +62,7 @@ public class AddDVD extends AddMedia {
         int length = Integer.parseInt(lengthField.getText());
         double cost = Double.parseDouble(costField.getText());
 
-        DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, (float) cost);
+        DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, cost);
         store.addMedia(dvd);
         JOptionPane.showMessageDialog(frame, "DVD added successfully."); 
         StoreManagerScreen mainFrame = new StoreManagerScreen(store);

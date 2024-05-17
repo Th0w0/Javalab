@@ -61,7 +61,7 @@ public class AddBook extends AddMedia{
         String category = categoryField.getText();
         double cost = Double.parseDouble(costField.getText());
         int token = Integer.parseInt(tokenField.getText());
-        Book book = new Book(title, category, (float) cost,token);
+        Book book = new Book(title, category, cost,token);
         store.addMedia(book);
         JOptionPane.showMessageDialog(frame, "Book added successfully."); // Thông báo khi sách được thêm
         StoreManagerScreen mainFrame = new StoreManagerScreen(store);

@@ -75,7 +75,7 @@ public class AddCD extends AddMedia {
         double cost = Double.parseDouble(costField.getText());
         int length = Integer.parseInt(lengthField.getText());
 
-        CompactDisc cd = new CompactDisc(title, category, director,artist,length, (float)cost);
+        CompactDisc cd = new CompactDisc(title, category, director,artist,length, cost);
         store.addMedia(cd);
         JOptionPane.showMessageDialog(frame, "CD added successfully."); // Thông báo khi sách được thêm
         StoreManagerScreen mainFrame = new StoreManagerScreen(store);
