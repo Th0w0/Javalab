@@ -1,4 +1,4 @@
-package soict.globalict.swing;
+package aims.swing;
 import java.awt.*;
 import java.awt.event.*;
 public class AWTAccumulator extends Frame {

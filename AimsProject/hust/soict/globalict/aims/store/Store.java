@@ -1,6 +1,7 @@
 package aims.store;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import  aims.media.*;
 
@@ -56,5 +57,9 @@ public class Store {
             }
         }
         return null; 
+    }
+
+     public List<Media> getItemsInStore() {
+        return itemsInStore;
     }
 }
