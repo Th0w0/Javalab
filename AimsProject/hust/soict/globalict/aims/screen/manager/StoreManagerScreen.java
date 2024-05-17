@@ -13,26 +13,14 @@ import aims.store.*;
 public class StoreManagerScreen extends JFrame {
     private Store store;
 
-    public StoreManagerScreen(Store store) {
-        this.store = store;
-        Container cp = getContentPane();
-        cp.setLayout(new BorderLayout());
-
-        cp.add(createNorth(), BorderLayout.NORTH);
-        cp.add(createCenter(), BorderLayout.CENTER);
-
-        setTitle("Store Manager");
-        setSize(1024, 768);
-        setVisible(true);
-    }
-
     private JPanel createNorth() {
         JPanel north = new JPanel();
-        north.setLayout(new BorderLayout());
-        north.add(createMenuBar(), BorderLayout.NORTH);
-        north.add(createHeader(), BorderLayout.CENTER);
+        north.setLayout(new BoxLayout(north, BoxLayout.Y_AXIS));
+        north.add(createMenuBar());
+        north.add(createHeader());
         return north;
     }
+
 
     private JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar();
@@ -78,6 +66,23 @@ public class StoreManagerScreen extends JFrame {
 
         return menuBar;
     }
+    
+    public StoreManagerScreen(Store store) {
+        this.store = store;
+        Container cp = getContentPane();
+        cp.setLayout(new BorderLayout());
+
+        cp.add(createNorth(), BorderLayout.NORTH);
+        cp.add(createCenter(), BorderLayout.CENTER);
+
+        setTitle("Store Manager");
+        setSize(1024, 768);
+        setVisible(true);
+    }
+
+   
+
+    
 
     private JPanel createHeader() {
         JPanel header = new JPanel();
