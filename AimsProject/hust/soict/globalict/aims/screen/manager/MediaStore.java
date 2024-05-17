@@ -1,11 +1,10 @@
 package aims.screen.manager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import aims.media.*;
-
 public class MediaStore extends JPanel {
     private Media media;
 
