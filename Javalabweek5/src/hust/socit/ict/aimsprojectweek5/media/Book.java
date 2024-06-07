@@ -1,7 +1,7 @@
-package aims.media;
+package ict.aimsprojectweek5.media;
 
 
-import aims.media.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class Book extends Media {
     }
 
     // Getters and setters
-    
+
     public List<String> getAuthors() {
         return authors;
     }
@@ -38,13 +38,13 @@ public class Book extends Media {
         this.authors = authors;
     }
 
-    
+
     public void addAuthor(String authorName) {
         if (!this.authors.contains(authorName)) {
             this.authors.add(authorName);
         }
     }
-    
+
     public void removeAuthor(String authorName) {
         if (this.authors.contains(authorName)) {
             this.authors.remove(authorName);
@@ -57,5 +57,8 @@ public class Book extends Media {
         return(order + ".Book - " +  this.title+ " - " + this.getCategory()  + " - " + this.getToken() + " - " + this.getCost() + " $");
     }
 
-    
+    public static void main(String[] args) {
+        System.out.print("book");
+    }
+
 }
